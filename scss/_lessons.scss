@@ -1,0 +1,92 @@
+.with-lessons {
+    background-color: $lightGrey;
+    .with-button {
+        text-align: center;
+        .internal-button {
+            display: inline-block;
+            min-width: 140px;
+            padding: 15px 10px 11px;
+            border: 1px solid $cream;
+            text-align: center;
+            border-radius: 48px;
+            color: $pink;
+            font-size: 14px;
+            font-family: $boldFont;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include transition(all 0.2s ease-in);
+        }
+    }
+    .lesson {
+        position: relative;
+        p {
+            color: $darkGrey;
+            font-size: 17px;
+            font-family: $lightFont;
+            font-weight: 300;
+            @include transition(color 0.2s ease-in);
+            &:not(:last-of-type) {
+                margin-bottom: 30px;
+            }
+            &:last-of-type {
+                margin: 0px auto;
+            }
+        }
+        &:hover {
+            .internal-button {
+                border: 1px solid $darkGrey;
+                color: $darkBlue;
+            }
+            p {
+                color: $darkBlue;
+            }
+        }
+    }
+}
+@media screen and (max-device-width: 720px) {
+    .with-lessons {
+        .title {
+            margin: 0px auto 30px;
+        }
+        .lesson {
+            margin-bottom: 60px;
+        }
+        .with-button {
+            &:first-of-type {
+                margin-bottom: 20px;
+            }
+            &:last-child {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+@media screen and (min-device-width: 721px) {
+    .with-lessons {
+        .title {
+            margin: 0px auto 80px;
+        }
+        .lesson {
+            &.with-arrow:after {
+                position: absolute;
+                top: 10px;
+                right: -24px;
+                display: block;
+                content: "";
+                width: 48px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-image: url("../img/arrow.svg");
+            }
+        }
+        .with-button {
+            &:first-of-type {
+                margin-bottom: 40px;
+            }
+            &:last-child {
+                margin-top: 80px;
+            }
+        }
+    }
+}

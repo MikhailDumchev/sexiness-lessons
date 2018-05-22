@@ -1,0 +1,20 @@
+.with-button {
+    .button {
+        display: inline-block;
+        min-width: 270px;
+        padding: 20px 15px;
+        background-color: $red;
+        color: $white;
+        font-size: 17px;
+        font-family: $lightFont;
+        font-weight: 300;
+        border-radius: 54px;
+        text-align: center;
+        @include transition(background-color, 0.2s, ease-in);
+        &:hover {
+            background-color: $darkRed;
+            cursor: pointer;
+            @include animation(buttonPulsation 1s);
+        }
+    }
+}

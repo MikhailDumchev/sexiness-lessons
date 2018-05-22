@@ -1,0 +1,61 @@
+.with-structure {
+    p {
+        &:not(.title) {
+            font-size: 17px;
+            font-family: $lightFont;
+            font-weight: 300;
+            color: $grey;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 48px;
+                font-family: $boldFont;
+                font-weight: 700;
+                color: $red;
+                padding-bottom: 15px;
+                @include transition(color 0.2s ease-in);
+            }
+            @include transition(color 0.2s ease-in);
+            &:hover {
+                color: $darkGrey;
+                span {
+                    color: $darkRed;
+                }
+            }
+        }
+    }
+    .with-button {
+        text-align: center;
+    }
+}
+@media screen and (max-device-width: 720px) {
+    .with-structure {
+        p {
+            &.title {
+                margin: 0px auto 30px;
+            }
+            &:not(.title) {
+                margin: 0px auto 30px;
+                padding: 0px 30px;
+            }
+        }
+        .with-button {
+            margin: 15px auto 0px;
+        }
+    }
+}
+@media screen and (min-device-width: 721px) {
+    .with-structure {
+        p {
+            &.title {
+                margin: 0px auto 80px;
+            }
+            &:not(.title) {
+                margin: 0px auto;
+            }
+        }
+        .with-button {
+            margin: 100px auto 0px;
+        }
+    }
+}

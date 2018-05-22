@@ -1,0 +1,60 @@
+.with-expert {
+    h2 {
+        font-family: $boldFont;
+        font-weight: 700;
+        color: $darkBlue;
+    }
+    img {
+        max-width: 100%;
+    }
+    p {
+        font-family: $lightFont;
+        font-weight: 300;
+        color: $pink;
+        line-height: 150%;
+        &:not(:last-of-type) {
+            margin: 0px auto 20px;
+        }
+        &:last-of-type {
+            margin: 0px auto;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+}
+@media screen and (max-device-width: 480px) {
+    .with-expert {
+        h2 {
+            font-size: 24px;
+            margin: 30px auto 30px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (min-device-width: 1025px) {
+    .with-expert {
+        h2 {
+            font-size: 36px;
+            margin: 80px auto 40px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    .with-expert {
+        h2 {
+            font-size: 24px;
+            margin: 30px auto 30px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}

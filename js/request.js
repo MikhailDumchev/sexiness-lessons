@@ -154,7 +154,6 @@ function Request() {
                         //Если используется POST-запросы (или на обработчик необходимо отправлять файлы); 
                         if (form.getAttribute("method") === "POST") {
                             data = new FormData(form);
-                            data.append("ajax_indicator", true);
                             XHR.open(form.getAttribute("method"), handlerAddress, true);
                             XHR.send(data);
                         //Если используется GET-запросы;

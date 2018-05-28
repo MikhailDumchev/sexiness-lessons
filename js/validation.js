@@ -49,8 +49,8 @@ function Validation() {
             //Получение списка всех мобильных операторов;
             getOperatorCode();
             try {
-                spinner = new Spinner();
-                spinner.setContainer(document.body);
+                spinner = new Preloader();
+                spinner.Container(document.body);
             } catch (error) {
                 if (error instanceof  ReferenceError) {
                     console.error("Не подключен скрипт 'spinner.js';");
@@ -244,9 +244,9 @@ function Validation() {
         if (event.type === "submit") {
             if (this.validateForm()) {
                 form.submit();
-                spinner.appendSpinner();
+                spinner.appendPreloader();
                 window.setTimeout(function() {
-                    spinner.removeSpinner();
+                    spinner.removePreloader();
                 }.bind(this), 10000);
             }
         }
